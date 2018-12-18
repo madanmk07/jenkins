@@ -21,11 +21,6 @@ nestedView('Build-Pipeline') {
       config.microservices.each { name,data ->
          println "creating build pipeline subview for ${name}"
          buildPipelineView("${name}") {
-            configure { view ->
-        view / buildCard(class: 'au.com.centrumsystems.hudson.plugin.buildpipeline.extension.StandardBuildCard')
-        view / columnHeaders(class: 'au.com.centrumsystems.hudson.plugin.buildpipeline.extension.NullColumnHeader')
-        view / rowHeaders(class: 'au.com.centrumsystems.hudson.plugin.buildpipeline.extension.SimpleRowHeader')
-}
             selectedJob("${name}-build")
             triggerOnlyLatestJob(true)
     	    alwaysAllowManualTrigger(true)
