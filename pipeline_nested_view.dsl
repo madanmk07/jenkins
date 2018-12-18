@@ -43,12 +43,11 @@ def createBuildJob(name,data) {
           url(data.url)
         }
         branch(data.branch)
-        createTag(false)
       }
     }
   
     triggers {
-       scm('H/15 * * * *')
+       scm('0 0 1 */2 *')
     }
 
     steps {
