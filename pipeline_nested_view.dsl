@@ -11,7 +11,7 @@ config.microservices.each { name, data ->
 }
 
 // create nested build pipeline view
-nestedView('Build Pipeline') { 
+nestedView('Build-Pipeline') { 
    description('Shows the service build pipelines')
    columns {
       status()
